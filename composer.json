@@ -16,9 +16,14 @@
     "gashey/asterisk-ari-php": "dev-master"
   },
   "require-dev": {
-    "orchestra/testbench": "7.0",
-    "phpunit/phpunit": "^9.6",
-    "guzzlehttp/guzzle": "^7.7"
+    "orchestra/testbench": "^8.10",
+    "pestphp/pest": "^2.18",
+    "pestphp/pest-plugin-laravel": "^2.2",
+    "phpstan/phpstan": "^1.10",
+    "roave/security-advisories": "dev-latest",
+    "phpunit/php-code-coverage": "^10.1",
+    "squizlabs/php_codesniffer": "^3.7",
+    "phpmd/phpmd" : "@stable"
   },
   "autoload": {
     "psr-4": {
@@ -31,13 +36,22 @@
     }
   },
   "scripts": {
-    "test": "vendor/bin/phpunit"
+    "lint": "vendor/bin/phpcs -s src tests",
+    "lint-fix": "vendor/bin/phpcbf src tests",
+    "sca": "vendor/bin/phpstan analyse src tests",
+    "phpmd": "vendor/bin/phpmd ./src text codesize",
+    "test": "vendor/bin/pest"
   },
   "extra": {
     "laravel": {
       "providers": [
         "Mobiverse\\LaravelAsteriskAri\\LaravelAsteriskAriServiceProvider"
       ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
     }
   }
 }
