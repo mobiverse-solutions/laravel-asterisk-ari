@@ -18,4 +18,7 @@ return [
 
     // Put the client into debug mode and log debug messages
     'enable_ari_debug_mode' => false,
+
+    // Use the Laravel logger
+    'enable_laravel_logger' => false,
 ];

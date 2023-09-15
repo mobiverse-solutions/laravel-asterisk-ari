@@ -81,7 +81,9 @@ class StartServer extends Command
             }
         );
 
-        $ariWebSocketClientSettings->setLoggerInterface(Log::getLogger());
+        if (config('laravel-asterisk-ari.enable_laravel_logger')) {
+            $ariWebSocketClientSettings->setLoggerInterface(Log::getLogger());
+        }
 
         $ariWebSocketClient = AriWebSocketClientFactory::create(
             $ariWebSocketClientSettings,
