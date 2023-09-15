@@ -81,7 +81,7 @@ class StartServer extends Command
             }
         );
 
-//        $ariWebSocketClientSettings->setLoggerInterface(Log::getLogger());
+        $ariWebSocketClientSettings->setLoggerInterface(Log::getLogger());
 
         $ariWebSocketClient = AriWebSocketClientFactory::create(
             $ariWebSocketClientSettings,
