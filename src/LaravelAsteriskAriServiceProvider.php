@@ -31,7 +31,7 @@ class LaravelAsteriskAriServiceProvider extends ServiceProvider
             [
             __DIR__ . '/../config/laravel-asterisk-ari.php' => config_path('laravel-asterisk-ari.php'),
             ],
-            'config'
+            'laravel-asterisk-ari-config'
         );
 
         $this->registerCommands();
