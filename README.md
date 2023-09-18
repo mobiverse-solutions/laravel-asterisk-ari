@@ -89,7 +89,7 @@ This package is not available on Packagist. Hence, to use this package in your l
 5. After successfully adding this package to your project, you will need to publish the config file where you can
    set up your credentials for Asterisk ARI access. The following command will allow you to do that:
     ```bash
-    php artisan vendor:publish laravel-asterisk-ari-config
+    php artisan vendor:publish --tag laravel-asterisk-ari-config
     ```
 
 6. The config file `laravel-asterisk-ari.php`, will be published to your config directory `./config`. Customize
