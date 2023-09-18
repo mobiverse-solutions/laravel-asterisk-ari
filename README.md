@@ -50,6 +50,10 @@ This package is not available on Packagist. Hence, to use this package in your l
     ```json
     {
       "repositories": [
+        { 
+          "type": "git", 
+          "url": "https://github.com/gashey/asterisk-ari-php.git" 
+        },
         {
           "type": "git",
           "url": "https://github.com/gashey/laravel-asterisk-ari.git"
