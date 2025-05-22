@@ -13,7 +13,7 @@
     { "type": "git", "url": "https://github.com/gashey/asterisk-ari-php.git" }
   ],
   "require": {
-    "gashey/asterisk-ari-php": "0.1.*"
+    "gashey/asterisk-ari-php": "dev-master"
   },
   "require-dev": {
     "orchestra/testbench": "^8.10",
